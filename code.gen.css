@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+
+html,body {
+    height:100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;          /* παίρνει 90% του viewport για μικρές οθόνες */
+    max-width: 400px; 
+}
+
+h1 {
+    
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;             
+    justify-content: center;  
+    gap: 10px;   
+}
+
+#length-pass {
+    width: 60px;
+    height: 40px;  
+    padding: 0 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+#generate-btn {
+     height: 40px; 
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f1632f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#generate-btn:hover {
+    background-color: #e0673c;
+}
+
+.passwords {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px;
+}
+
+
+
+.password {
+    width: 100%;          /* γεμίζει όλο το πλάτος του grid cell */
+    background-color: #acdeea; 
+    border: 1px solid #3b7dd8;
+    padding: 10px;
+    border-radius: 12px;
+    font-family: monospace;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: all;
+    color: rgb(38, 36, 36);
+    text-align: center;
+    user-select: none;
+    word-wrap: break-word;   
+    word-break: break-all;
+}
+
+
+.password:hover {
+    background-color: #35b233;
+}
+
+
+#first-pass:hover, #sec-pass:hover, #third-pass:hover, #fourth-pass:hover {
+    background-color: #3366b2; /* λίγο πιο σκούρο hover */
+}
+
+.copied {
+    background-color: #3b7dd8;
+    color: white;
+}
+
+
+@media (max-width: 350px) {
+    .passwords {
+        grid-template-columns: 1fr;  /* 1 column */
+    }
+
+    #length-pass, #generate-btn {
+        width: 100%;     /* γεμίζουν όλο το πλάτος */
+        margin-bottom: 10px;
+    }
+}
+
+
+
